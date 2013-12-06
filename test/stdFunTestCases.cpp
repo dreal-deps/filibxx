@@ -1,15 +1,15 @@
-/*                                                                           
-**  fi_lib++  --- A fast interval library (Version 2.0)                     
-**                                                                  
-**  Copyright (C) 2001:                                                        
-**                                                     
-**  Werner Hofschuster, Walter Kraemer                               
-**  Wissenschaftliches Rechnen/Softwaretechnologie (WRSWT)  
-**  Universitaet Wuppertal, Germany                                           
-**  Michael Lerch, German Tischler, Juergen Wolff von Gudenberg       
-**  Institut fuer Informatik                                         
-**  Universitaet Wuerzburg, Germany                                           
-** 
+/*
+**  fi_lib++  --- A fast interval library (Version 2.0)
+**
+**  Copyright (C) 2001:
+**
+**  Werner Hofschuster, Walter Kraemer
+**  Wissenschaftliches Rechnen/Softwaretechnologie (WRSWT)
+**  Universitaet Wuppertal, Germany
+**  Michael Lerch, German Tischler, Juergen Wolff von Gudenberg
+**  Institut fuer Informatik
+**  Universitaet Wuerzburg, Germany
+**
 **  This library is free software; you can redistribute it and/or
 **  modify it under the terms of the GNU Library General Public
 **  License as published by the Free Software Foundation; either
@@ -24,10 +24,10 @@
 **  License along with this library; if not, write to the Free
 **  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 */
-char* in_no[27][61];
-char* out_no[27][61];
+const char* in_no[27][61];
+const char* out_no[27][61];
 
-void initStdFunTestCases() 
+void initStdFunTestCases()
 {
 in_no[1][1] = "C6F16CC0DF1540F5";
 in_no[1][2] = "B17B3E4076622F04";
