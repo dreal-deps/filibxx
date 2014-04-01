@@ -676,33 +676,33 @@ namespace filib
         void readChar(std::istream& in, char c0) throw(interval_io_exception);
 
         template <typename N>
-        N constructFromBitSet(std::istream & in) throw(interval_io_exception)
+        N constructFromBitSet(std::istream & /* in */) throw(interval_io_exception)
         {
                 throw interval_io_exception("constructFromBitSet() called for unsupported type");
         }
         template <typename N>
-        N constructFromBitSet(std::string & in) throw(interval_io_exception)
+        N constructFromBitSet(std::string & /* in */) throw(interval_io_exception)
         {
                 throw interval_io_exception("constructFromBitSet() called for unsupported type");
         }
         template <typename N>
-        N constructFromBitSet(char const * in) throw(interval_io_exception)
+        N constructFromBitSet(char const * /* in*/ ) throw(interval_io_exception)
         {
                 throw interval_io_exception("constructFromBitSet() called for unsupported type");
         }
 
         template <typename N>
-        N constructFromHexSet(std::istream & in) throw(interval_io_exception)
+        N constructFromHexSet(std::istream & /* in */) throw(interval_io_exception)
         {
                 throw interval_io_exception("constructFromHexSet() called for unsupported type");
         }
         template <typename N>
-        N constructFromHexSet(std::string & in) throw(interval_io_exception)
+        N constructFromHexSet(std::string & /* in */) throw(interval_io_exception)
         {
                 throw interval_io_exception("constructFromHexSet() called for unsupported type");
         }
         template <typename N>
-        N constructFromHexSet(char const * in) throw(interval_io_exception)
+        N constructFromHexSet(char const * /* in */) throw(interval_io_exception)
         {
                 throw interval_io_exception("constructFromHexSet() called for unsupported type");
         }
