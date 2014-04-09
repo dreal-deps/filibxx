@@ -1,15 +1,15 @@
-/*                                                                           
-**  fi_lib++  --- A fast interval library (Version 2.0)                     
-**                                                                  
-**  Copyright (C) 2001:                                                        
-**                                                     
-**  Werner Hofschuster, Walter Kraemer                               
-**  Wissenschaftliches Rechnen/Softwaretechnologie (WRSWT)  
-**  Universitaet Wuppertal, Germany                                           
-**  Michael Lerch, German Tischler, Juergen Wolff von Gudenberg       
-**  Institut fuer Informatik                                         
-**  Universitaet Wuerzburg, Germany                                           
-** 
+/*
+**  fi_lib++  --- A fast interval library (Version 2.0)
+**
+**  Copyright (C) 2001:
+**
+**  Werner Hofschuster, Walter Kraemer
+**  Wissenschaftliches Rechnen/Softwaretechnologie (WRSWT)
+**  Universitaet Wuppertal, Germany
+**  Michael Lerch, German Tischler, Juergen Wolff von Gudenberg
+**  Institut fuer Informatik
+**  Universitaet Wuerzburg, Germany
+**
 **  This library is free software; you can redistribute it and/or
 **  modify it under the terms of the GNU Library General Public
 **  License as published by the Free Software Foundation; either
@@ -43,20 +43,20 @@ protected:
   T *data;
 
 public:
-  
+
   Matrix(unsigned int rows, unsigned int cols)
     : m(rows), n(cols)
   {
     unsigned int size = m*n;
-    assert (data = new T[size]);
+    data = new T[size];
   }
 
-  Matrix (const Matrix<T> &A) 
+  Matrix (const Matrix<T> &A)
   {
     m = A.m;
     n = A.n;
     unsigned int size = m*n;
-    assert (data = new T[size]);
+    data = new T[size];
     for (int i=0; i<size; i++)
       data[i] = A.data[i];
   }
@@ -71,13 +71,13 @@ public:
     if (&A != this) {
       unsigned int size = A.m*A.n;
       if (size != m*n) {
-	delete [] data;
-	assert(data = new T[size]);
+        delete [] data;
+        data = new T[size];
       }
       m = A.m;
       n = A.n;
       for (int i=0; i<size; i++)
-	data[n] = A.data[n];
+        data[n] = A.data[n];
     }
     return *this;
   }
@@ -118,20 +118,3 @@ public:
 };
 
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

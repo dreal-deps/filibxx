@@ -1,15 +1,15 @@
-/*                                                                           
-**  fi_lib++  --- A fast interval library (Version 2.0)                     
-**                                                                  
-**  Copyright (C) 2001:                                                        
-**                                                     
-**  Werner Hofschuster, Walter Kraemer                               
-**  Wissenschaftliches Rechnen/Softwaretechnologie (WRSWT)  
-**  Universitaet Wuppertal, Germany                                           
-**  Michael Lerch, German Tischler, Juergen Wolff von Gudenberg       
-**  Institut fuer Informatik                                         
-**  Universitaet Wuerzburg, Germany                                           
-** 
+/*
+**  fi_lib++  --- A fast interval library (Version 2.0)
+**
+**  Copyright (C) 2001:
+**
+**  Werner Hofschuster, Walter Kraemer
+**  Wissenschaftliches Rechnen/Softwaretechnologie (WRSWT)
+**  Universitaet Wuppertal, Germany
+**  Michael Lerch, German Tischler, Juergen Wolff von Gudenberg
+**  Institut fuer Informatik
+**  Universitaet Wuerzburg, Germany
+**
 **  This library is free software; you can redistribute it and/or
 **  modify it under the terms of the GNU Library General Public
 **  License as published by the Free Software Foundation; either
@@ -38,17 +38,17 @@ class Vector
 {
 public:
   typedef T value_type;
-  
+
   Vector(unsigned int length)
     : n(length)
   {
-    assert (data = new T[n]);
+    data = new T[n];
   }
 
-  Vector(const Vector<T> &x) 
+  Vector(const Vector<T> &x)
   {
     n = x.n;
-    assert (data = new T[n]);
+    data = new T[n];
     for (int i=0; i<n; i++)
       data[i] = x.data[i];
   }
@@ -57,17 +57,17 @@ public:
   {
     delete [] data;
   }
-  
-  Vector<T> &operator =(const Vector<T> &x) 
+
+  Vector<T> &operator =(const Vector<T> &x)
   {
     if (&x != this) {
       if (n != x.n) {
-	delete [] data;
-	n = x.n;
-	assert(data = new T[n]);
+        delete [] data;
+        n = x.n;
+        assert(data = new T[n]);
       }
       for (int i=0; i<n; i++)
-	data[i] = x.data[i];
+        data[i] = x.data[i];
     }
     return *this;
   }
@@ -91,7 +91,7 @@ public:
 
   friend std::ostream &operator <<(std::ostream &os, const Vector<T> &v)
   {
-    for (unsigned int i=0; i<v.size(); i++) 
+    for (unsigned int i=0; i<v.size(); i++)
       os << const_cast<T&>(v[i]) << std::endl;
     os << std::endl;
 
