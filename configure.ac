@@ -92,7 +92,7 @@ case "${fparchitecture}" in
     ;;
 esac
 
-if [[ "$GXX" = "yes" ]] ; then
+if [[[ $CXX == *g++* && ! $CXX == *clang* ]]] ; then
         AC_LANG_PUSH([C++])
 
         CXXFLAGS_SAVE="${CXXFLAGS}"
