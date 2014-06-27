@@ -121,6 +121,7 @@ fi
 AC_SUBST([define_have_sse])
 AC_SUBST([define_have_x87])
 
+AM_CONDITIONAL([HAVE_X87], [test x$fparchitecture = xx87])
 AC_LANG_PUSH([C++])
 AC_MSG_CHECKING([whether the boost random library is installed])
   AC_LINK_IFELSE([AC_LANG_SOURCE([#include <boost/random.hpp>
