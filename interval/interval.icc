@@ -168,17 +168,17 @@ namespace filib
         /**
          * copy constructor
          **/
-        template <typename N, rounding_strategy K, interval_mode E>
-        inline interval<N,K,E>::interval(interval<N,K,E> const & o)
-        : INF(o.INF), SUP(o.SUP)
-        {
-        }
+        // template <typename N, rounding_strategy K, interval_mode E>
+        // inline interval<N,K,E>::interval(interval<N,K,E> const & o)
+        // : INF(o.INF), SUP(o.SUP)
+        // {
+        // }
 
         /**
          * destructor
          **/
-        template <typename N, rounding_strategy K, interval_mode E>
-        inline interval<N,K,E>::~interval() {}
+        // template <typename N, rounding_strategy K, interval_mode E>
+        // inline interval<N,K,E>::~interval() {}
 
         /**
          * assignment operator
