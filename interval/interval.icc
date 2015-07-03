@@ -169,7 +169,7 @@ namespace filib
          * copy constructor
          **/
         template <typename N, rounding_strategy K, interval_mode E>
-        inline interval<N,K,E>::interval(interval<N,K,E> const & o)
+        inline interval<N,K,E>::interval(interval<N,K,E> const & o) noexcept
         : INF(o.INF), SUP(o.SUP)
         {
         }
@@ -178,7 +178,7 @@ namespace filib
          * destructor
          **/
         template <typename N, rounding_strategy K, interval_mode E>
-        inline interval<N,K,E>::~interval() {}
+        inline interval<N,K,E>::~interval() noexcept {}
 
         /**
          * assignment operator

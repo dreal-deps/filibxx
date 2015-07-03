@@ -657,12 +657,12 @@ namespace filib
 			/**
 			 copy constructor
 			 */
-			inline interval(interval<N,K,E> const & o);
+			inline interval(interval<N,K,E> const & o) noexcept;
 
 			/**
 			 destructor
 			 */
-			inline ~interval();
+			inline ~interval() noexcept;
 
 			/**
 			 assignment operator
