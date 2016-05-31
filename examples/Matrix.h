@@ -57,7 +57,7 @@ public:
     n = A.n;
     unsigned int size = m*n;
     data = new T[size];
-    for (int i=0; i<size; i++)
+    for (unsigned int i=0; i<size; i++)
       data[i] = A.data[i];
   }
 
