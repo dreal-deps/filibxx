@@ -1107,9 +1107,9 @@ namespace filib
                         if (E && x.isEmpty())
                                 os << "[ EMPTY ]";
                         else if (E && (x == interval<N,K,E>::constructIntervalNoChecks(FILIB_NINFINITY,-FILIB_MAX)) )
-                                os << "[ -INFTY ]";
+                                os << "[-INFTY, -INFTY]";
                         else if (E && (x == interval<N,K,E>::constructIntervalNoChecks(FILIB_MAX,FILIB_INFINITY)) )
-                                os << "[ +INFTY ]";
+                                os << "[+INFTY, +INFTY]";
                         else if (E && (x == interval<N,K,E>::constructIntervalNoChecks(FILIB_NINFINITY,FILIB_INFINITY)) )
                                 os << "[ ENTIRE ]";
                         else if (!E && (!(primitive::isRegular(x.inf()) && primitive::isRegular(x.sup())) ||
