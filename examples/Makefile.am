@@ -26,7 +26,7 @@
 #
 
 LDADD = ../libprim/libprim.la
-AM_CPPFLAGS = -I..
+AM_CPPFLAGS = -I${top_srcdir}
 
 bin_PROGRAMS = testGauss  bisection comp_exp comp_sin horner testNewton simple_example1 example_template
 

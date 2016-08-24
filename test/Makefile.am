@@ -3,7 +3,7 @@ noinst_bindir = $(abs_top_builddir)/test/.bin/
 noinst_bin_PROGRAMS = makeTestCases
 bin_PROGRAMS = check_0f check_0t check_1f check_2f check_4f check_5f
 LDADD = ../libprim/libprim.la
-AM_CPPFLAGS = -I..
+AM_CPPFLAGS = -I${top_srcdir}
 
 makeTestCases_SOURCES = makeTestCases.cpp stdFunTestCases.cpp
 makeTestCases_CXXFLAGS = -O0

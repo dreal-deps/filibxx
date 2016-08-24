@@ -1,5 +1,6 @@
 EXTRA_DIST = reconf configure
 SUBDIRS = 
+AM_CPPFLAGS = -I$(top_srcdir)
 
 lib_LTLIBRARIES = libprim.la
 

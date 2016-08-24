@@ -26,7 +26,7 @@
 #
 
 LDADD = ../libprim/libprim.la
-AM_CPPFLAGS = -I..
+AM_CPPFLAGS = -I${top_srcdir}
 
 bin_PROGRAMS = \
 	aribench_double_0f  \
